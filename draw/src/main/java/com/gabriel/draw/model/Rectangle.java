@@ -6,14 +6,18 @@ import lombok.Data;
 import com.gabriel.drawfx.model.Shape;
 import java.awt.*;
 
+/*
+    added this class for the Rectangle shape
+    follows structure of Line.java class
+ */
 
 @Data
-public class Line extends Shape {
+public class Rectangle extends Shape {
 
-    public Line(Point start, Point end){
+    public Rectangle(Point start, Point end) {
         super(start);
         this.setEnd(end);
-        this.setColor(Color.RED);
-        this.setRendererService(new LineRendererService());
+        this.setColor(Color.BLACK); // pick a default color
+        this.setRendererService(new RectangleRendererService());
     }
 }

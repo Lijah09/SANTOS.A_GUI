@@ -6,18 +6,23 @@ import com.gabriel.drawfx.model.Shape;
 
 import java.awt.*;
 
+/*
+    added this class for rendering the Rectangle
+    follows structure of LineRendererService.java class
+ */
+
 
 public class EllipseRendererService implements RendererService {
 
     @Override
     public void render(Graphics g, Shape shape, boolean xor) {
-        Ellipse ellipse = (Ellipse) shape;
+        Rectangle rect = (Rectangle) shape;
         g.setXORMode(shape.getColor());
-        g.drawOval(
-                ellipse.getTopLeftX(),
-                ellipse.getTopLeftY(),
-                ellipse.getWidth(),
-                ellipse.getHeight()
+        g.drawRect(
+                rect.getTopLeftX(),
+                rect.getTopLeftY(),
+                rect.getWidth(),
+                rect.getHeight()
         );
     }
 }

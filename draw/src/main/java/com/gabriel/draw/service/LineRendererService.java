@@ -14,6 +14,10 @@ public class LineRendererService implements RendererService {
         Line line = (Line) shape;
       //  g.setColor(shape.getColor());
         g.setXORMode(shape.getColor());
-        g.drawLine(line.getLocation().x, line.getLocation().y, line.getEnd().x, line.getEnd().y);
+        g.drawLine(
+                line.getLocation().x,
+                line.getLocation().y,
+                line.getEnd().x,
+                line.getEnd().y);
     }
 }

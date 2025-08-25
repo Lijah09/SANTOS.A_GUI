@@ -6,14 +6,22 @@ import com.gabriel.drawfx.model.Shape;
 
 import java.awt.*;
 
+/*
+    added this class for rendering the Ellipse
+    follows structure of LineRendererService.java class
+ */
 
-public class LineRendererService implements RendererService {
+public class EllipseRendererService implements RendererService {
 
     @Override
     public void render(Graphics g, Shape shape, boolean xor) {
-        Line line = (Line) shape;
-      //  g.setColor(shape.getColor());
+        Ellipse ellipse = (Ellipse) shape;
         g.setXORMode(shape.getColor());
-        g.drawLine(line.getLocation().x, line.getLocation().y, line.getEnd().x, line.getEnd().y);
+        g.drawOval(
+                ellipse.getTopLeftX(),
+                ellipse.getTopLeftY(),
+                ellipse.getWidth(),
+                ellipse.getHeight()
+        );
     }
 }
