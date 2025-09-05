@@ -9,7 +9,7 @@ import javax.swing.*;
 public class DrawingFrame extends JFrame {
 
 
-    public DrawingFrame(AppService appService){
+    public DrawingFrame(AppService appService){  // appservice included to know what the user wants to do
         DrawingWindowController drawingWindowController = new DrawingWindowController(appService);
         this.addWindowListener(drawingWindowController);
         this.addWindowFocusListener(drawingWindowController);

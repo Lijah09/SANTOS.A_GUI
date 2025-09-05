@@ -10,10 +10,15 @@ import java.awt.*;
 public class LineRendererService implements RendererService {
 
     @Override
-    public void render(Graphics g, Shape shape, boolean xor) {
+    public void render(Graphics g, Shape shape, boolean xor) { //xor is for drawing mode when you set coordinates 1 XOR 1 = 0 etc.
         Line line = (Line) shape;
       //  g.setColor(shape.getColor());
-        g.setXORMode(shape.getColor());
+        if (xor) {
+            g.setXORMode(Color.WHITE);
+            g.setColor(shape.getColor());
+        } else {
+            g.setColor(shape.getColor());
+        }
         g.drawLine(
                 line.getLocation().x,
                 line.getLocation().y,

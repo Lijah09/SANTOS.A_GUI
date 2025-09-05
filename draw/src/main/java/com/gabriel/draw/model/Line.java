@@ -11,9 +11,8 @@ import java.awt.*;
 public class Line extends Shape {
 
     public Line(Point start, Point end){
-        super(start);
-        this.setEnd(end);
-        this.setColor(Color.RED);
+        super(start, end);
+        this.setColor(Color.BLACK); // color should not be set since it's the default
         this.setRendererService(new LineRendererService());
     }
 }

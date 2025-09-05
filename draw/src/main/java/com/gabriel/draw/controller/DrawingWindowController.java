@@ -1,6 +1,6 @@
 package com.gabriel.draw.controller;
-import com.gabriel.drawfx.service.AppService;
 
+import com.gabriel.drawfx.service.AppService;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowFocusListener;
 import java.awt.event.WindowListener;
@@ -50,9 +50,11 @@ public class DrawingWindowController implements WindowListener,
 
     }
 
+
+    // lacks code to allow mode/state, screen is only white
     @Override
     public void windowActivated(WindowEvent e) {
-
+        e.getWindow().repaint();
     }
 
     @Override
@@ -60,8 +62,10 @@ public class DrawingWindowController implements WindowListener,
 
     }
 
+
+    // lacks code to allow mode/state, screen is only white
     @Override
     public void windowStateChanged(WindowEvent e) {
-
+        e.getWindow().repaint();
     }
 }

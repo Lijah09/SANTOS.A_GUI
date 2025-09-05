@@ -20,4 +20,9 @@ public class Main {
         drawingFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         drawingFrame.setSize(500,500);
     }
+
+    /*
+    first, include the drawingappservice (check the DrawingAppService class)
+    then, make the frame: exiting, size, visible
+     */
 }

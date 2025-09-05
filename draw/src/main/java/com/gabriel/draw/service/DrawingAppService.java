@@ -11,10 +11,17 @@ import com.gabriel.drawfx.service.ScalerService;
 import java.awt.*;
 
 public class  DrawingAppService implements AppService {
+
+    /*
+    there should be no attributes in service; implementation should be in the model
+    should include all services (appservice, moverservice, rendererservice, etc.)
+    INTERFACE ONLY (for all services)
+     */
+
     final private Drawing drawing;
     private Color color;
     Color fill;
-    private ShapeMode shapeMode = ShapeMode.Line;
+    private ShapeMode shapeMode = ShapeMode.Line;  // sets default mode to line; hardcoded
     private DrawMode drawMode = DrawMode.Idle;
 
     MoverService moverService;
@@ -34,7 +41,7 @@ public class  DrawingAppService implements AppService {
     @Override
     public void setShapeMode(ShapeMode shapeMode) {
         this.shapeMode = shapeMode;
-    }
+    }  // we can modify this to change the default mode and shape modes (for menu)
 
     @Override
     public DrawMode getDrawMode() {

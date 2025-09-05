@@ -6,6 +6,8 @@ import java.util.List;
 
 
 public interface ShapeService {
+
+    // frame encapsulates everything in the app
     void create(Shape shape);
     void update(Shape shape);
     void delete(Shape shape);

@@ -1,7 +1,7 @@
 package com.gabriel.draw.model;
 
 
-import com.gabriel.draw.service.LineRendererService;
+import com.gabriel.draw.service.RectangleRendererService;
 import lombok.Data;
 import com.gabriel.drawfx.model.Shape;
 import java.awt.*;
@@ -15,8 +15,7 @@ import java.awt.*;
 public class Rectangle extends Shape {
 
     public Rectangle(Point start, Point end) {
-        super(start);
-        this.setEnd(end);
+        super(start, end);
         this.setColor(Color.BLACK); // pick a default color
         this.setRendererService(new RectangleRendererService());
     }
